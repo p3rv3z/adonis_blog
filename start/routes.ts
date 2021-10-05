@@ -13,4 +13,10 @@ Route.group(() => {
   Route.patch('categories/:slug', 'CategoriesController.update')
   Route.delete('categories/:slug', 'CategoriesController.destroy')
 
+  Route.get('posts', 'PostsController.index')
+  Route.post('posts', 'PostsController.store')
+  Route.get('posts/:slug', 'PostsController.show')
+  Route.patch('posts/:slug', 'PostsController.update')
+  Route.delete('posts/:slug', 'PostsController.destroy')
+
 }).prefix('api')
