@@ -1,7 +1,8 @@
 import { DateTime } from 'luxon'
-import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, belongsTo, column, ManyToMany, manyToMany } from '@ioc:Adonis/Lucid/Orm'
 import { slugify } from '@ioc:Adonis/Addons/LucidSlugify'
 import User from './User'
+import Category from './Category'
 
 export default class Post extends BaseModel {
   @column({ isPrimary: true })
@@ -35,4 +36,7 @@ export default class Post extends BaseModel {
 
   @belongsTo(() => User)
   public author: BelongsTo<typeof User>
+
+  @manyToMany(() => Category)
+  public categories: ManyToMany<typeof Category>
 }

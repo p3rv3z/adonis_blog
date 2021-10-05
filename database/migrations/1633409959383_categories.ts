@@ -5,7 +5,7 @@ export default class Categories extends BaseSchema {
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
-      table.increments('id')
+      table.increments('id').primary()
       table.string('name')
       table.string('slug').unique()
       table.boolean('is_featured').defaultTo(false).comment('true means featured and false means not featured')
