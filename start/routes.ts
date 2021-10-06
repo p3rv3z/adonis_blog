@@ -19,4 +19,10 @@ Route.group(() => {
   Route.patch('posts/:slug', 'PostsController.update')
   Route.delete('posts/:slug', 'PostsController.destroy')
 
+  Route.group(() => {
+    Route.get('home/posts', 'HomePageController.posts')
+    Route.get('home/authors', 'HomePageController.authors')
+  })
+  .prefix('blog').namespace('App/Controllers/Http/Blog')
+
 }).prefix('api')

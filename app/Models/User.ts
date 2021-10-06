@@ -4,6 +4,9 @@ import Hash from '@ioc:Adonis/Core/Hash'
 import Post from './Post'
 
 export default class User extends BaseModel {
+
+  public serializeExtras = true
+
   @column({ isPrimary: true })
   public id: number
 
