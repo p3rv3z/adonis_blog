@@ -16,6 +16,18 @@ export default class CategorySeeder extends BaseSeeder {
         name: 'Sports',
         is_featured: true
       },
+      {
+        name: 'Life Style',
+        is_featured: true
+      },
+      {
+        name: 'Travel',
+        is_featured: true
+      },
+      {
+        name: 'Fitness',
+        is_featured: true
+      },
     ])
   }
 }
