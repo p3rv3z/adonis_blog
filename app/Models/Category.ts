@@ -4,6 +4,9 @@ import { slugify } from '@ioc:Adonis/Addons/LucidSlugify'
 import Post from './Post'
 
 export default class Category extends BaseModel {
+
+  public serializeExtras = true
+
   @column({ isPrimary: true })
   public id: number
 

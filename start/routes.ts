@@ -28,6 +28,8 @@ Route.group(() => {
 
     Route.get('authors', 'AuthorsController.index')
     Route.get('authors/:id', 'AuthorsController.show')
+
+    Route.get('categories/:slug', 'CategoriesController.show')
   })
   .prefix('blog').namespace('App/Controllers/Http/Blog')
 
