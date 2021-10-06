@@ -28,7 +28,7 @@ export default class Post extends BaseModel {
   @column()
   public userId: number
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime({ autoCreate: true , serialize: (value) => value.toFormat('dd LLL, yyyy')})
   public createdAt: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })

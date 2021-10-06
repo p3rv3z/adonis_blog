@@ -22,6 +22,8 @@ Route.group(() => {
   Route.group(() => {
     Route.get('home/posts', 'HomePageController.posts')
     Route.get('home/authors', 'HomePageController.authors')
+    Route.get('posts', 'PostsController.index')
+    Route.get('posts/:slug', 'PostsController.show')
   })
   .prefix('blog').namespace('App/Controllers/Http/Blog')
 
